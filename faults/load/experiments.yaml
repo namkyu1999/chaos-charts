@@ -97,8 +97,4 @@ spec:
       app.kubernetes.io/part-of: litmus
       app.kubernetes.io/component: experiment-job
       app.kubernetes.io/version: ci
-    secrets:
-      - name: cloud-secret
-        mountPath: /tmp/
-
 ---
