@@ -93,8 +93,11 @@ spec:
         value: "false"
 
     labels:
-      name: azure-instance-stop
+      name: k6-loadgen
       app.kubernetes.io/part-of: litmus
       app.kubernetes.io/component: experiment-job
       app.kubernetes.io/version: ci
+    secrets:
+      - name: k6-script
+        mountPath: /tmp/
 ---
