@@ -52,7 +52,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines", "chaosexperiments", "chaosresults"]
         verbs: ["create", "list", "get", "patch", "update", "delete"]
-    image: "lak9348/go-runner:v3"
+    image: "lak9348/go-runner:v4"
     imagePullPolicy: Always
     args:
       - -c
