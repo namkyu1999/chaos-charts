@@ -13,7 +13,7 @@ metadata:
     app.kubernetes.io/version: ci
 spec:
   definition:
-    scope: Cluster
+    scope: Namespaced
     permissions:
       # Create and monitor the experiment & helper pods
       - apiGroups: [""]
