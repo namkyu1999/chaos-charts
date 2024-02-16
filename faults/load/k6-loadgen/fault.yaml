@@ -52,7 +52,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines", "chaosexperiments", "chaosresults"]
         verbs: ["create", "list", "get", "patch", "update", "delete"]
-    image: "lak9348/go-runner:v5"
+    image: "lak9348/go-runner:v6"
     imagePullPolicy: Always
     args:
       - -c
@@ -68,7 +68,7 @@ spec:
 
       # Period to wait before and after injection of chaos in sec
       - name: RAMP_TIME
-        value: ""
+        value: "0"
 
       # Provide the secret name of the JS script
       - name: SCRIPT_SECRET_NAME
@@ -77,6 +77,13 @@ spec:
       # Provide the secret key of the JS script
       - name: SCRIPT_SECRET_KEY
         value: "script.js"
+
+      # Provide the image name of the helper pod
+      - name: LIB_IMAGE
+        value: "ghcr.io/grafana/k6-operator:latest-runner"
+
+      - name: LIBImagePullPolicy
+        value: "Always"
 
     labels:
       name: k6-loadgen
