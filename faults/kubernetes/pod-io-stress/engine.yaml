@@ -17,6 +17,8 @@ spec:
       spec:
         components:
           env:
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://simplest-collector:4317"
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
               value: '120'
