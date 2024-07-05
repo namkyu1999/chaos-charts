@@ -884,8 +884,6 @@ spec:
     env:
       - name: TOTAL_CHAOS_DURATION
         value: "120"
-      - name: OTEL_EXPORTER_OTLP_ENDPOINT
-        value: "http://simplest-collector:4317"
       ## specify the size as percentage of free space on the file system
       ## default value 90 (in percentage)
       - name: FILESYSTEM_UTILIZATION_PERCENTAGE

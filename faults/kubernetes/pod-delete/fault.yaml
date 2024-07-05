@@ -76,8 +76,6 @@ spec:
     command:
       - /bin/bash
     env:
-      - name: OTEL_EXPORTER_OTLP_ENDPOINT
-        value: "http://simplest-collector:4317"
       - name: TOTAL_CHAOS_DURATION
         value: "15"
 
